@@ -7,3 +7,21 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+.card {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+#input {
+    display: flex;
+    justify-content: center;
+}
+
+#twoButtons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
