@@ -3,7 +3,17 @@ body {
     font-family: 'Bitter', serif;
 }
 
-#heading {
+h1 {
     display: flex;
     justify-content: center;
+}
+
+.container {
+    background-color: lightgray;
+    display: absolute;
+}
+
+.col-6 .col-md-4 {
+    display: flex;
+    align-items: center;
 }
