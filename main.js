@@ -56,6 +56,11 @@ const domBuilder = (temp) => {
 printToDom(domString, "output");
 } 
 
+const colorChanger = () => {
+    document.getElementById("output").innerHTML = "";
+    
+}
+
 const eraseText = () => {
     document.getElementById("input-temp").value = "";
 }
