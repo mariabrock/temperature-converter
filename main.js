@@ -56,12 +56,14 @@ const domBuilder = (temp) => {
 printToDom(domString, "output");
 } 
 
+const eraseText = () => {
+    document.getElementById("input-temp").value = "";
+}
+
 // Assign a function to be executed when the button is clicked
 const init = () => {    
     convertButton.addEventListener("click", determineConverter);
-    // clearButton.addEventListener("click"); 
-    // enterKey();
+    clearButton.addEventListener("click", eraseText);
 }
+
 init();
-
-
