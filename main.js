@@ -66,7 +66,7 @@ const colorChanger = (temp) => {
 };
 
 const eraseText = () => {
-    document.getElementById("input-temp").value = "";
+    window.location.reload();
 }
 
 // Assign a function to be executed when the button is clicked
