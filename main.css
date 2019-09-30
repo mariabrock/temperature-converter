@@ -35,3 +35,21 @@ h1 {
     display: flex;
     align-items: center;
 }
+
+#output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}

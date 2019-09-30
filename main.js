@@ -56,6 +56,15 @@ const domBuilder = (temp) => {
 printToDom(domString, "output");
 } 
 
+const colorChanger = (temp) => {
+    let tempNum = document.getElementById("output").innerHTML;
+    if(tempNum > 90 || tempNum > 32) {
+        return tempInput.classList.add("red");
+    } else if (tempNum < 32 || tempNum < 0) {
+        return tempInput.classList.add("blue");
+    } else return tempInput.classList.add("green");
+};
+
 const eraseText = () => {
     document.getElementById("input-temp").value = "";
 }
