@@ -16,7 +16,6 @@ cRadio.checked = true;
 fRadio.checked = false;
 
 // Get a reference to the button element in the DOM
-const input = document.getElementById("input-temp");
 const clearButton = document.getElementById("clear");
 const convertButton = document.getElementById("convert");
 
@@ -24,12 +23,14 @@ const convertButton = document.getElementById("convert");
 
 const toCelsius =  (input) => {
     const celsius = ((input - 32) /1.8);  // input minus 32 then divided by 1.8
+    colorChange(celsius, "C");
     return(celsius);
 }
 
 
 const toFahrenheit = (input) => {
     let fahrenheit = ((input * 1.8) +32)  //input times 1.8 then + 32
+    colorChange(fahrenheit, "F");
     return(fahrenheit);
 }
 
@@ -49,20 +50,21 @@ const determineConverter = () => {
 const domBuilder = (temp) => {
     let domString = `<div class="card" style="width: 18rem;">
 <div class="card-body">
-  <h5 class="card-title"><i class="fas fa-thermometer-half"></i></h5>
+  <h5 class="card-title" id="icon"><i class="fas fa-thermometer-half"></i></h5>
   <p class="card-text">${temp}</p>
 </div>
 </div>` 
 printToDom(domString, "output");
 } 
 
-const colorChanger = (temp) => {
-    let tempNum = document.getElementById("output").innerHTML;
-    if(tempNum > 90 || tempNum > 32) {
-        return tempInput.classList.add("red");
-    } else if (tempNum < 32 || tempNum < 0) {
-        return tempInput.classList.add("blue");
-    } else return tempInput.classList.add("green");
+const colorChanger = (input, scale) => {
+    let convertedNum = document.getElementById("output");
+    if(convertedNum.innerHTML > 90 || convertedNum.innerHTML > 32) {
+        convertedNum.classList.addClass("red");
+    } else if (convertedNum.innerHTML < 32 || convertedNum.innerHTML < 0) {
+        convertedNum.classList.addClass("blue");
+    } else { convertedNum.classList.addClass("green");}
+    // grab the id  of "icon" and change .innerHTML to new icon (using const)
 };
 
 const eraseText = () => {
@@ -73,6 +75,7 @@ const eraseText = () => {
 const init = () => {    
     convertButton.addEventListener("click", determineConverter);
     clearButton.addEventListener("click", eraseText);
+    convertButton.addEventListener("click", colorChanger);
 }
 
 init();
