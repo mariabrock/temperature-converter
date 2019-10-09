@@ -6,6 +6,9 @@ Use this application to select sandwich options, place them in a cart,and displa
 ## Screenshots
 ![Temp Converter Pageload](https://raw.githubusercontent.com/mariabrock/temperature-converter/master/screenshots/mainview1.PNG)
 ![Temp Converter Temp Output](https://raw.githubusercontent.com/mariabrock/temperature-converter/master/screenshots/mainview2.PNG)
+![redtemp](https://raw.githubusercontent.com/mariabrock/temperature-converter/master/screenshots/redtemp.PNG)
+![bluetemp](https://raw.githubusercontent.com/mariabrock/temperature-converter/master/screenshots/bluetemp.PNG)
+![greentemp](https://raw.githubusercontent.com/mariabrock/temperature-converter/master/screenshots/green%20temp.PNG)
 
 ## How to Run
 * clone down this project 
